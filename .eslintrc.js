@@ -10,7 +10,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:prettier/recommended',
   ],
-  // prettier/react 추가
   rules: {
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
   },
