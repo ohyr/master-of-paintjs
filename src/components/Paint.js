@@ -9,6 +9,16 @@ function Paint() {
       </header>
       <canvas className="canvas" />
       <div className="controls">
+        <div className="controls__range">
+          <input
+            className="range__width"
+            type="range"
+            min="0.1"
+            max="5.0"
+            defaultValue="2.5"
+            step="0.1"
+          />
+        </div>
         <div className="controls__colors">
           <div className="controls__color controls__black" />
           <div className="controls__color controls__white" />
