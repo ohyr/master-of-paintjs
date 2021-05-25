@@ -2,9 +2,12 @@ import React from 'react';
 import './Paint.css';
 
 function Paint() {
-  function handleSave(e) {
-    e.preventDefault();
-    console.log('Save Button');
+  function handleSave() {
+    const image = document.querySelector('canvas').toDataURL();
+    const link = document.createElement('a');
+    link.href = image;
+    link.download = 'Mater_Of_PaintJS[🎨]';
+    link.click();
   }
 
   return (
