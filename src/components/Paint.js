@@ -2,7 +2,7 @@ import React from 'react';
 import './Paint.css';
 
 function Paint() {
-  function handleSave() {
+  function handleSaveClick() {
     const image = document.querySelector('canvas').toDataURL();
     const link = document.createElement('a');
     link.href = image;
@@ -28,7 +28,7 @@ function Paint() {
           />
         </div>
         <div className="controls__btns">
-          <button type="button" onClick={handleSave}>
+          <button type="button" onClick={handleSaveClick}>
             Save
           </button>
         </div>
