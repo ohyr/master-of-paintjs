@@ -2,11 +2,6 @@ import React from 'react';
 import './Paint.css';
 
 function Paint() {
-  function handleMode(e) {
-    e.preventDefault();
-    console.log('Mode Button!');
-  }
-
   function handleSave(e) {
     e.preventDefault();
     console.log('Save Button');
@@ -30,9 +25,6 @@ function Paint() {
           />
         </div>
         <div className="controls__btns">
-          <button type="button" onClick={handleMode}>
-            Fill
-          </button>
           <button type="button" onClick={handleSave}>
             Save
           </button>
