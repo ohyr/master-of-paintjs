@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Paint.css';
 
+const CANVAS_SIZE = 700;
+const INITIAL_COLOR = 'black';
+const INITIAL_LINE_WIDTH = 5.0;
+
 function Paint() {
   const canvasRef = useRef();
   const contextRef = useRef();
@@ -10,12 +14,12 @@ function Paint() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    canvas.width = 700;
-    canvas.height = 700;
+    canvas.width = CANVAS_SIZE;
+    canvas.height = CANVAS_SIZE;
 
     const context = canvas.getContext('2d');
-    context.strokeStyle = 'black';
-    context.lineWidth = 5.0;
+    context.strokeStyle = INITIAL_COLOR;
+    context.lineWidth = INITIAL_LINE_WIDTH;
     contextRef.current = context;
 
     setCtx(context);
