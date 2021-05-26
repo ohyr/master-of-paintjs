@@ -25,18 +25,18 @@ body {
 }
 
 .controls {
-  margin-top: 80px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .controls .controls__range {
-  margin-bottom: 30px;
+  margin: 15px;
 }
 
 .controls .controls__btns {
-  margin-bottom: 30px;
+  margin: 15px;
 }
 
 .controls__btns button {
@@ -61,6 +61,7 @@ body {
 
 .controls .controls__colors {
   display: flex;
+  margin: 15px;
 }
 
 .controls__colors .controls__color {
