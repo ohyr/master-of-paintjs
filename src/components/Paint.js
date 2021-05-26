@@ -2,15 +2,18 @@ import React, { useRef, useEffect } from 'react';
 import './Paint.css';
 
 function Paint() {
-  const canvas = useRef();
+  const canvasRef = useRef();
 
   useEffect(() => {
-    canvas.current.focus();
+    const canvas = canvasRef.current;
+    canvas.width = 700;
+    canvas.height = 700;
+
     return () => {};
   }, []);
 
   function handleSaveClick() {
-    const image = canvas.current.toDataURL();
+    const image = canvasRef.current.toDataURL();
     const link = document.createElement('a');
     link.href = image;
     link.download = 'Mater_Of_PaintJS[🎨]';
@@ -22,7 +25,7 @@ function Paint() {
       <header className="paint-title">
         <h1>Palette</h1>
       </header>
-      <canvas className="canvas" ref={canvas} />
+      <canvas className="canvas" ref={canvasRef} />
       <div className="controls">
         <div className="controls__range">
           <input
