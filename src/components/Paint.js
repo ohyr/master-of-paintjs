@@ -44,6 +44,11 @@ function Paint() {
     }
   }
 
+  function handleRangeChange({ nativeEvent }) {
+    const size = nativeEvent.target.value;
+    ctx.lineWidth = size;
+  }
+
   function handleSaveClick() {
     const image = canvasRef.current.toDataURL();
     const link = document.createElement('a');
@@ -74,6 +79,7 @@ function Paint() {
             max="5.0"
             defaultValue="2.5"
             step="0.1"
+            onInput={handleRangeChange}
           />
         </div>
         <div className="controls__btns">
