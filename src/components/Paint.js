@@ -8,6 +8,7 @@ const INITIAL_LINE_WIDTH = 5.0;
 function Paint() {
   const canvasRef = useRef();
   const contextRef = useRef();
+  const curColorRef = useRef();
 
   const [ctx, setCtx] = useState();
   const [painting, setPainting] = useState(false);
@@ -21,6 +22,8 @@ function Paint() {
     context.strokeStyle = INITIAL_COLOR;
     context.lineWidth = INITIAL_LINE_WIDTH;
     contextRef.current = context;
+
+    curColorRef.current.style.backgroundColor = INITIAL_COLOR;
 
     setCtx(context);
     return () => {};
@@ -56,6 +59,7 @@ function Paint() {
   function handleColorClick({ nativeEvent }) {
     const color = window.getComputedStyle(nativeEvent.target).backgroundColor;
     ctx.strokeStyle = color;
+    curColorRef.current.style.backgroundColor = color;
   }
 
   function handleSaveClick() {
@@ -80,6 +84,10 @@ function Paint() {
         onMouseLeave={stopPainting}
       />
       <div className="controls">
+        <div className="controls__current">
+          <div>Current Color: </div>
+          <div className="current__color" ref={curColorRef} />
+        </div>
         <div className="controls__range">
           <input
             className="range__width"

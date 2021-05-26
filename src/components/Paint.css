@@ -31,6 +31,16 @@ body {
   align-items: center;
 }
 
+.controls .controls__current {
+  display: flex;
+}
+
+.controls .controls__current .current__color {
+  margin: 5px;
+  width: 15px;
+  height: 15px;
+}
+
 .controls .controls__range {
   margin: 15px;
 }
