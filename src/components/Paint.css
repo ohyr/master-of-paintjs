@@ -33,6 +33,9 @@ body {
 
 .controls .controls__current {
   display: flex;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 17px;
 }
 
 .controls .controls__current .current__color {

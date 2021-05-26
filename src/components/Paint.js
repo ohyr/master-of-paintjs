@@ -85,7 +85,7 @@ function Paint() {
       />
       <div className="controls">
         <div className="controls__current">
-          <div>Current Color: </div>
+          <div>Current Color : </div>
           <div className="current__color" ref={curColorRef} />
         </div>
         <div className="controls__range">
