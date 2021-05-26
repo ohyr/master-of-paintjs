@@ -15,7 +15,7 @@ function Paint() {
 
     const context = canvas.getContext('2d');
     context.strokeStyle = 'black';
-    context.lineWidth = 2.5;
+    context.lineWidth = 5.0;
     contextRef.current = context;
 
     setCtx(context);
@@ -76,8 +76,8 @@ function Paint() {
             className="range__width"
             type="range"
             min="0.1"
-            max="5.0"
-            defaultValue="2.5"
+            max="10.0"
+            defaultValue="5.0"
             step="0.1"
             onInput={handleRangeChange}
           />
