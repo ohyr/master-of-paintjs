@@ -49,6 +49,11 @@ function Paint() {
     ctx.lineWidth = size;
   }
 
+  function handleColorClick({ nativeEvent }) {
+    const color = window.getComputedStyle(nativeEvent.target).backgroundColor;
+    ctx.strokeStyle = color;
+  }
+
   function handleSaveClick() {
     const image = canvasRef.current.toDataURL();
     const link = document.createElement('a');
@@ -88,15 +93,69 @@ function Paint() {
           </button>
         </div>
         <div className="controls__colors">
-          <div className="controls__color controls__black" />
-          <div className="controls__color controls__white" />
-          <div className="controls__color controls__red" />
-          <div className="controls__color controls__orange" />
-          <div className="controls__color controls__yellow" />
-          <div className="controls__color controls__green" />
-          <div className="controls__color controls__skyblue" />
-          <div className="controls__color controls__blue" />
-          <div className="controls__color controls__purple" />
+          <div
+            className="controls__color controls__black"
+            onClick={handleColorClick}
+            aria-hidden="true"
+            tabIndex="0"
+            role="button"
+          />
+          <div
+            className="controls__color controls__white"
+            onClick={handleColorClick}
+            aria-hidden="true"
+            tabIndex="0"
+            role="button"
+          />
+          <div
+            className="controls__color controls__red"
+            onClick={handleColorClick}
+            aria-hidden="true"
+            tabIndex="0"
+            role="button"
+          />
+          <div
+            className="controls__color controls__orange"
+            onClick={handleColorClick}
+            aria-hidden="true"
+            tabIndex="0"
+            role="button"
+          />
+          <div
+            className="controls__color controls__yellow"
+            onClick={handleColorClick}
+            aria-hidden="true"
+            tabIndex="0"
+            role="button"
+          />
+          <div
+            className="controls__color controls__green"
+            onClick={handleColorClick}
+            aria-hidden="true"
+            tabIndex="0"
+            role="button"
+          />
+          <div
+            className="controls__color controls__skyblue"
+            onClick={handleColorClick}
+            aria-hidden="true"
+            tabIndex="0"
+            role="button"
+          />
+          <div
+            className="controls__color controls__blue"
+            onClick={handleColorClick}
+            aria-hidden="true"
+            tabIndex="0"
+            role="button"
+          />
+          <div
+            className="controls__color controls__purple"
+            onClick={handleColorClick}
+            aria-hidden="true"
+            tabIndex="0"
+            role="button"
+          />
         </div>
       </div>
     </div>
