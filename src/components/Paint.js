@@ -87,11 +87,6 @@ function Paint() {
             onInput={handleRangeChange}
           />
         </div>
-        <div className="controls__btns">
-          <button type="button" onClick={handleSaveClick}>
-            Save
-          </button>
-        </div>
         <div className="controls__colors">
           <div
             className="controls__color controls__black"
@@ -156,6 +151,11 @@ function Paint() {
             tabIndex="0"
             role="button"
           />
+        </div>
+        <div className="controls__btns">
+          <button type="button" onClick={handleSaveClick}>
+            Save
+          </button>
         </div>
       </div>
     </div>
