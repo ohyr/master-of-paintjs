@@ -44,6 +44,10 @@ body {
   height: 15px;
 }
 
+.controls .controls__current .current__linewidth {
+  margin-left: 5px;
+}
+
 .controls .controls__range {
   margin: 15px;
 }

@@ -9,6 +9,7 @@ function Paint() {
   const canvasRef = useRef();
   const contextRef = useRef();
   const curColorRef = useRef();
+  const curLineWidthRef = useRef();
 
   const [ctx, setCtx] = useState();
   const [painting, setPainting] = useState(false);
@@ -24,6 +25,8 @@ function Paint() {
     contextRef.current = context;
 
     curColorRef.current.style.backgroundColor = INITIAL_COLOR;
+
+    curLineWidthRef.current.textContent = INITIAL_LINE_WIDTH;
 
     setCtx(context);
     return () => {};
@@ -54,6 +57,7 @@ function Paint() {
   function handleRangeChange({ nativeEvent }) {
     const size = nativeEvent.target.value;
     ctx.lineWidth = size;
+    curLineWidthRef.current.textContent = size;
   }
 
   function handleColorClick({ nativeEvent }) {
@@ -87,6 +91,10 @@ function Paint() {
         <div className="controls__current">
           <div>Current Color : </div>
           <div className="current__color" ref={curColorRef} />
+        </div>
+        <div className="controls__current">
+          <div>Current Line Width : </div>
+          <div className="current__linewidth" ref={curLineWidthRef} />
         </div>
         <div className="controls__range">
           <input
