@@ -48,6 +48,10 @@ body {
   margin: 15px;
 }
 
+.controls .controls__range .range__width {
+  width: 350px;
+}
+
 .controls .controls__btns {
   margin: 15px;
 }
