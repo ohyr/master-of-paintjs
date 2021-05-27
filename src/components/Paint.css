@@ -48,16 +48,8 @@ body {
   margin-left: 5px;
 }
 
-.controls .controls__range {
-  margin: 15px;
-}
-
 .controls .controls__range .range__width {
   width: 350px;
-}
-
-.controls .controls__btns {
-  margin: 15px;
 }
 
 .controls__btns button {
@@ -78,6 +70,12 @@ body {
 
 .controls__btns button:active {
   transform: scale(0.98);
+}
+
+.controls__btns .btn__fill {
+  background-color: cornsilk;
+  width: 100px;
+  font-size: 10px;
 }
 
 .controls .controls__colors {

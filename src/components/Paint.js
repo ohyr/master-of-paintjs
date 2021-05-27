@@ -66,6 +66,13 @@ function Paint() {
     curColorRef.current.style.backgroundColor = color;
   }
 
+  function handleFillClick() {
+    ctx.beginPath();
+    ctx.rect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+    ctx.fillStyle = curColorRef.current.style.backgroundColor;
+    ctx.fill();
+  }
+
   function handleSaveClick() {
     const image = canvasRef.current.toDataURL();
     const link = document.createElement('a');
@@ -91,6 +98,15 @@ function Paint() {
         <div className="controls__current">
           <div>Current Color : </div>
           <div className="current__color" ref={curColorRef} />
+          <div className="controls__btns">
+            <button
+              className="btn__fill"
+              type="button"
+              onClick={handleFillClick}
+            >
+              Fill Palette
+            </button>
+          </div>
         </div>
         <div className="controls__current">
           <div>Current Line Width : </div>
