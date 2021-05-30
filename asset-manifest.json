@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/master_of_paintjs/static/css/main.bd6ea078.chunk.css",
+    "main.js": "/master_of_paintjs/static/js/main.0868b265.chunk.js",
+    "main.js.map": "/master_of_paintjs/static/js/main.0868b265.chunk.js.map",
+    "runtime-main.js": "/master_of_paintjs/static/js/runtime-main.c263dbd9.js",
+    "runtime-main.js.map": "/master_of_paintjs/static/js/runtime-main.c263dbd9.js.map",
+    "static/js/2.e6e9642b.chunk.js": "/master_of_paintjs/static/js/2.e6e9642b.chunk.js",
+    "static/js/2.e6e9642b.chunk.js.map": "/master_of_paintjs/static/js/2.e6e9642b.chunk.js.map",
+    "index.html": "/master_of_paintjs/index.html",
+    "static/css/main.bd6ea078.chunk.css.map": "/master_of_paintjs/static/css/main.bd6ea078.chunk.css.map",
+    "static/js/2.e6e9642b.chunk.js.LICENSE.txt": "/master_of_paintjs/static/js/2.e6e9642b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c263dbd9.js",
+    "static/js/2.e6e9642b.chunk.js",
+    "static/css/main.bd6ea078.chunk.css",
+    "static/js/main.0868b265.chunk.js"
+  ]
+}
