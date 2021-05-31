@@ -4,6 +4,17 @@ import './Paint.css';
 const CANVAS_SIZE = 700;
 const INITIAL_COLOR = 'black';
 const INITIAL_LINE_WIDTH = 5.0;
+const COLOR_LIST = [
+  'black',
+  'white',
+  '#ff3b30',
+  '#ff9500',
+  '#fc0',
+  '#4cd963',
+  '#5ac8fa',
+  '#0579ff',
+  '#5856d6',
+];
 
 function Paint() {
   const canvasRef = useRef();
@@ -124,69 +135,16 @@ function Paint() {
           />
         </div>
         <div className="controls__colors">
-          <div
-            className="controls__color controls__black"
-            onClick={handleColorClick}
-            aria-hidden="true"
-            tabIndex="0"
-            role="button"
-          />
-          <div
-            className="controls__color controls__white"
-            onClick={handleColorClick}
-            aria-hidden="true"
-            tabIndex="0"
-            role="button"
-          />
-          <div
-            className="controls__color controls__red"
-            onClick={handleColorClick}
-            aria-hidden="true"
-            tabIndex="0"
-            role="button"
-          />
-          <div
-            className="controls__color controls__orange"
-            onClick={handleColorClick}
-            aria-hidden="true"
-            tabIndex="0"
-            role="button"
-          />
-          <div
-            className="controls__color controls__yellow"
-            onClick={handleColorClick}
-            aria-hidden="true"
-            tabIndex="0"
-            role="button"
-          />
-          <div
-            className="controls__color controls__green"
-            onClick={handleColorClick}
-            aria-hidden="true"
-            tabIndex="0"
-            role="button"
-          />
-          <div
-            className="controls__color controls__skyblue"
-            onClick={handleColorClick}
-            aria-hidden="true"
-            tabIndex="0"
-            role="button"
-          />
-          <div
-            className="controls__color controls__blue"
-            onClick={handleColorClick}
-            aria-hidden="true"
-            tabIndex="0"
-            role="button"
-          />
-          <div
-            className="controls__color controls__purple"
-            onClick={handleColorClick}
-            aria-hidden="true"
-            tabIndex="0"
-            role="button"
-          />
+          {COLOR_LIST.map(color => (
+            <div
+              className="controls__color"
+              style={{ backgroundColor: `${color}` }}
+              onClick={handleColorClick}
+              aria-hidden="true"
+              tabIndex="0"
+              role="button"
+            />
+          ))}
         </div>
         <div className="controls__btns">
           <button type="button" onClick={handleSaveClick}>

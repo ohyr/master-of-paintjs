@@ -91,39 +91,3 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
-
-.controls__colors .controls__black {
-  background-color: black;
-}
-
-.controls__colors .controls__white {
-  background-color: white;
-}
-
-.controls__colors .controls__red {
-  background-color: #ff3b30;
-}
-
-.controls__colors .controls__orange {
-  background-color: #ff9500;
-}
-
-.controls__colors .controls__yellow {
-  background-color: #fc0;
-}
-
-.controls__colors .controls__green {
-  background-color: #4cd963;
-}
-
-.controls__colors .controls__skyblue {
-  background-color: #5ac8fa;
-}
-
-.controls__colors .controls__blue {
-  background-color: #0579ff;
-}
-
-.controls__colors .controls__purple {
-  background-color: #5856d6;
-}
