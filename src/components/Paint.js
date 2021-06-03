@@ -92,6 +92,10 @@ function Paint() {
     link.click();
   }
 
+  function handleCM({ nativeEvent }) {
+    nativeEvent.preventDefault();
+  }
+
   return (
     <div className="paint">
       <header className="paint-title">
@@ -104,6 +108,7 @@ function Paint() {
         onMouseUp={stopPainting}
         onMouseMove={onPainting}
         onMouseLeave={stopPainting}
+        onContextMenu={handleCM}
       />
       <div className="controls">
         <div className="controls__current">
