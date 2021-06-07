@@ -18,7 +18,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "tailwind-build": "postcss src/tailwind.css -o public/index.css",
+    "tailwind-build": "postcss src/tailwind.css -o public/index.css && minify public/index.css > public/index.min.css && rm public/index.css",
     "start": "yarn tailwind-build && react-scripts start",
     "build": "yarn tailwind-build && react-scripts build",
     "deploy": "gh-pages -d build",
@@ -51,6 +51,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "minify": "^7.0.2",
     "prettier": "^2.3.0"
   },
   "homepage": "https://ohyr.github.io/master_of_paintjs/"
